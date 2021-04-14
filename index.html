@@ -13,8 +13,54 @@
     <div class="container my-5">
         <h1 class="text-center title">Weather In</h1>
             <form class="search-location">
-                <input type="text" name="" id="" class="form-control text-muted form-rounded p-4 shadow-sm">
+                <input 
+                type="text" 
+                name="city" 
+                placeholder="What city?"
+                autocomplete="off"
+                class="form-control text-muted form-rounded p-4 shadow-sm">
             </form>
+
+        <div class="card rounded my-3 shadow-lg back-card">
+            <div class="card-top text-center">
+                <div class="city-name my-3">
+                    <p>Abuja</p>
+                    <span>...</span>
+                </div>
+                <img src="img/night_image.svg" alt="Night Image">
+            </div>
+
+            <div class="card-body">
+                <div class="card-mid row">
+                    <div class="col-8 text-center temp">
+                        <span>30&deg;C</span>
+                    </div>
+                    <div class="col-4 condition-temp">
+                        <p>Thunder Storm</p>
+                        <p>30&deg;</p>
+                        <p>27&deg;</p>
+                    </div>
+                </div>
+
+                <div class="icon-container card shadow">
+                    <div class="mx-auto">
+                        <img src="img/cloud.svg" alt="A Cloud" class="img-fluid"/>
+                    </div>    
+                </div>
+
+                <div class="card-bottom px-5 py-4 row">
+                    <div class="col text-center">
+                        <p>30&deg;C</p>
+                        <span>Feels Like</span>
+                    </div>
+                    <div class="col text-center">
+                        <p>55&deg;C</p>
+                        <span>Humidity</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
     
 </body>
