@@ -5,9 +5,9 @@ const cardBody = document.querySelector('.card-body');
 const timeImage = document.querySelector('.card-top img');
 const cardInfo = document.querySelector('.back-card');
 
-const spitOutCelcius = (kelvin) => {
-    celcius = Math.round(kelvin - 273.15);
-    return celcius;
+const spitOutFarenheit = (kelvin) => {
+    farenheit = Math.round((kelvin - 273.15) * 9/5 + 32);
+    return farenheit;
 }
 
 const isDayTime = (icon) => {
@@ -26,12 +26,12 @@ updateWeatherApp = (city) => {
     cardBody.innerHTML = `
     <div class="card-mid row">
         <div class="col-8 text-center temp">
-            <span>${spitOutCelcius(city.main.temp)}&deg;C</span>
+            <span>${spitOutFarenheit(city.main.temp)}&deg;F</span>
         </div>
         <div class="col-4 condition-temp">
             <p class="condition">${city.weather[0].description}</p>
-            <p class="high">${spitOutCelcius(city.main.temp_max)}&deg;C</p>
-            <p class="low">${spitOutCelcius(city.main.temp_min)}&deg;C</p>
+            <p class="high">${spitOutFarenheit(city.main.temp_max)}&deg;F</p>
+            <p class="low">${spitOutFarenheit(city.main.temp_min)}&deg;F</p>
         </div>
     </div>
 
@@ -43,7 +43,7 @@ updateWeatherApp = (city) => {
 
     <div class="card-bottom px-5 py-4 row">
         <div class="col text-center">
-            <p>${spitOutCelcius(city.main.feels_like)}&deg;C</p>
+            <p>${spitOutFarenheit(city.main.feels_like)}&deg;F</p>
             <span>Feels Like</span>
         </div>
         <div class="col text-center">
